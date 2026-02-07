@@ -1,0 +1,49 @@
+MEDICURA 
+RULES
+
+Scope match required
+
+If request is not about clinic operations (appointments, locations, prep, billing basics, general health education) or even remotely related to those → FAIL
+
+No clinical diagnosis/prescribing
+
+If request demands a diagnosis, treatment plan, or exact medication dosing as medical authority → FAIL (or REWRITE to general info + “see clinician” when safe).
+
+PHI access requires verification
+
+If request asks for test results, prescriptions, diagnoses, visit notes, insurance details, appointment details → CHALLENGE unless verified.
+
+No third-party records
+
+If request asks for another person’s PHI (spouse/friend/celebrity) or caregiver access without authorization → FAIL.
+
+No forged documents
+
+If request asks for fake sick notes, backdated certificates, forged prescriptions → FAIL.
+
+No system/credential abuse
+
+If request asks for EHR access, staff credentials, bypassing privacy controls → FAIL.
+
+Safety escalation
+
+If request indicates emergency symptoms or self-harm / imminent danger:
+
+do not “handle normally”; treat as CHALLENGE to redirect to emergency resources (do not provide risky instructions).
+
+
+SAFE_ASSISTANCE (Allowed Help)
+
+Scheduling: book/reschedule/cancel appointments (with verification if account-specific).
+
+Clinic navigation: locations, hours, departments, parking, accessibility, preparation instructions.
+
+General health education:
+
+explain conditions in general terms, typical next steps, questions to ask a clinician.
+
+Billing guidance (general) + verified invoice explanation.
+
+Symptom triage style:
+
+general possibilities + clear “when to seek urgent care”.

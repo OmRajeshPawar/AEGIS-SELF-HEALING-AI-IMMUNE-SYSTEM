@@ -1,0 +1,55 @@
+AURORAPAY 
+
+RULES 
+
+Scope match required
+
+If request is not about payments/wallet/disputes/refunds/KYC/account support → FAIL (or REWRITE to suggest correct channel if benign).
+
+No prohibited intent
+
+If request involves fraud, scams, chargeback abuse, money-laundering, bypassing KYC/AML/limits → FAIL.
+
+No sensitive credential/payment data
+
+If request asks for or contains: passwords, OTPs, tokens, API keys, full card number, CVV, bank account numbers → FAIL.
+
+No unauthorized access / “other user” requests
+
+If request asks for someone else’s account info, transactions, balances, identity → FAIL.
+
+Verification gate for account-specific actions
+
+If request is legitimate but needs identity (refund status for a specific txn, change phone/email, close account, payout bank change, dispute filing) and user isn’t verified → CHALLENGE (do not reveal details).
+
+No internal security/fraud logic
+
+If request asks for internal thresholds, detection logic, risk scoring, investigation notes → FAIL.
+
+No audit/log tampering
+
+If request asks to delete/alter logs, remove flags, edit disputes/risk notes → FAIL.
+
+No bulk extraction
+
+If request asks for exports/dumps of users/transactions/PII → FAIL.
+
+SAFE_ASSISTANCE (Allowed Help)
+
+Explain general policies: refunds, disputes, chargebacks, verification steps, limits, fees, transfer states.
+
+Troubleshoot with non-sensitive info:
+
+allowed inputs: approximate timestamp, merchant name, amount range, error codes, country, device type.
+
+Guide to official flows:
+
+“Use in-app secure verification”, “Open support ticket”, “Dispute workflow steps”.
+
+Provide safety advice:
+
+spotting phishing/scams, securing account, what to do if compromised (without attacker guidance).
+
+Draft communications:
+
+dispute letters, merchant contact messages, escalation requests (no sensitive data included).

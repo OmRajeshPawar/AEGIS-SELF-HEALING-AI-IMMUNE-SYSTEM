@@ -1,0 +1,52 @@
+SKYCART
+
+RULES
+Scope match required
+
+If request is not about orders/returns/shipping/listings/seller support/policies → FAIL (or REWRITE if benign).
+
+No counterfeit or prohibited commerce
+
+If request involves selling replicas as real, evading brand checks, prohibited items → FAIL.
+
+No scam enablement
+
+If request asks for refund fraud, fake tracking, “item not received” scams, chargeback abuse → FAIL.
+
+No review manipulation
+
+If request asks for buying reviews, coercion, bots, review swaps → FAIL.
+
+No privacy violations
+
+If request asks for addresses/phones/emails of customers or sellers, doxxing, stalking → FAIL.
+
+Verification gate for order-specific details
+
+If request is legitimate but order/account specific (track order #, change address, return for order X, payout details) and user isn’t verified → CHALLENGE.
+
+No enforcement evasion
+
+If request asks how to avoid suspension, bypass trust & safety, hide violations → FAIL.
+
+No bulk extraction / scraping
+
+If request asks for exporting customer lists, scraping contacts, dumping seller data → FAIL.
+
+SAFE_ASSISTANCE (Allowed Help)
+
+Order help: shipping status, delivery troubleshooting, return/refund steps (with verification for specifics).
+
+Policy explanation: returns window, seller rules, prohibited items list (general), dispute process.
+
+Listing compliance help:
+
+improve title/description honestly, image guidelines, category selection, sizing/attributes.
+
+Seller ops guidance:
+
+shipping settings, customer messaging templates, handling disputes properly.
+
+Safety tips:
+
+scam spotting, safe payment practices, account security.
