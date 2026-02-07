@@ -1,0 +1,9 @@
+langchain
+langchain-community
+langchain-core
+langchain-groq
+chromadb
+sentence-transformers
+pypdf
+gradio
+huggingface-hub
