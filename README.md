@@ -41,7 +41,7 @@ Groq API Key
 
 Installation
 1. Clone the Repo 
- git clone [https://github.com/YOUR_USERNAME/AEGIS-AI-WAF.git](https://github.com/YOUR_USERNAME/AEGIS-AI-WAF.git)
+ git clone [https://github.com/YOUR_USERNAME/AEGIS-AI-WAF.git](https://github.com/OmRajeshPawar/AEGIS-AI-WAF.git)
 cd AEGIS-AI-WAF
 
 2. Install Dependencies
